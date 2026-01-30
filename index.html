@@ -188,8 +188,18 @@
                     <div class="flex gap-6">
                         <div class="flex-shrink-0 w-12 h-12 bg-brand-gold flex items-center justify-center font-display font-bold text-xl">3</div>
                         <div>
-                            <h4 class="font-bold text-lg mb-2">Le rapport arrive dans MyNotary</h4>
-                            <p class="text-brand-black/70">Un joli PDF avec tous les resultats est genere et uploade directement dans le dossier MyNotary du client.</p>
+                            <h4 class="font-bold text-lg mb-2">Le rapport est genere et envoye</h4>
+                            <p class="text-brand-black/70 mb-4">Petit detail : Efficiale ne permet pas de telecharger directement le PDF. Par contre, on peut recuperer toutes les informations.</p>
+                            <div class="bg-brand-black/5 p-4 border-l-2 border-brand-gold">
+                                <p class="font-medium text-sm mb-2">Du coup voila ce que je fais :</p>
+                                <ul class="check-list text-brand-black/70 text-sm">
+                                    <li>Je recree le design du rapport Efficiale en HTML</li>
+                                    <li>J'injecte les infos recuperees dedans</li>
+                                    <li>Je genere un PDF</li>
+                                    <li>Et je l'envoie dans le bon dossier MyNotary</li>
+                                </ul>
+                            </div>
+                            <p class="text-brand-black/70 mt-3">Au final, les mandataires ont un rapport qui ressemble a celui d'Efficiale, avec toutes les bonnes infos.</p>
                         </div>
                     </div>
 
@@ -241,66 +251,42 @@
             </div>
         </section>
 
-        <!-- COMMENT JE FAIS LE PDF -->
-        <section class="brut-box p-0">
-            <div class="section-header p-4 md:p-6 flex justify-between items-center">
-                <h2 class="font-display font-bold text-xl md:text-2xl">Comment je fais pour le PDF ?</h2>
-                <span class="tag tag-gold">POINT IMPORTANT</span>
-            </div>
-            <div class="p-6 md:p-10 space-y-6">
-                <p class="text-lg">Petit detail technique : Efficiale ne permet pas de telecharger directement le PDF. Par contre, on peut recuperer toutes les informations (les resultats des verifications, les alertes, etc.).</p>
-
-                <div class="bg-brand-gold/20 border-l-4 border-brand-gold p-6">
-                    <p class="font-bold mb-2">Du coup voila ce que je fais :</p>
-                    <ul class="check-list text-brand-black/70 space-y-2">
-                        <li>Je recree le design du rapport Efficiale en HTML (ca ressemblera au vrai)</li>
-                        <li>J'injecte les informations recuperees a l'interieur</li>
-                        <li>Je genere un PDF a partir de ca</li>
-                        <li>Et je l'envoie dans le bon dossier sur MyNotary</li>
-                    </ul>
-                </div>
-
-                <p class="text-brand-black/70">Au final, les mandataires auront un rapport qui ressemble a celui d'Efficiale, avec toutes les bonnes infos dedans.</p>
-            </div>
-        </section>
-
         <!-- OU J'EN SUIS -->
         <section class="brut-box p-0">
             <div class="section-header p-4 md:p-6 flex justify-between items-center">
-                <h2 class="font-display font-bold text-xl md:text-2xl">Ou j'en suis techniquement</h2>
-                <span class="tag tag-green">QUASI PRET</span>
+                <h2 class="font-display font-bold text-xl md:text-2xl">Ce que j'ai verifie</h2>
             </div>
             <div class="p-6 md:p-10">
-                <p class="mb-6 text-brand-black/70">J'ai teste toutes les connexions entre les systemes :</p>
+                <p class="mb-6 text-brand-black/70">J'ai teste toutes les connexions entre les systemes pour m'assurer que c'est faisable :</p>
 
                 <div class="space-y-3">
                     <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
                         <span>Detecter les signatures dans MyNotary</span>
-                        <span class="tag tag-green">OK</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
                         <span>Recuperer les infos du client</span>
-                        <span class="tag tag-green">OK</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
                         <span>Se connecter a Efficiale</span>
-                        <span class="tag tag-green">OK</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
                         <span>Verifier une societe + ses beneficiaires</span>
-                        <span class="tag tag-green">OK</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
                         <span>Verifier une personne</span>
-                        <span class="tag tag-gold">PRESQUE</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                     <div class="flex justify-between items-center py-2">
                         <span>Deposer le PDF dans MyNotary</span>
-                        <span class="tag tag-gold">PRESQUE</span>
+                        <span class="tag tag-green">POSSIBLE</span>
                     </div>
                 </div>
 
-                <p class="mt-6 text-brand-black/70">En gros les briques sont la, il reste a tout assembler proprement et gerer les cas particuliers.</p>
+                <p class="mt-6 text-brand-black/70">Toutes les briques sont la, il reste a tout assembler proprement.</p>
             </div>
         </section>
 
