@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation LCB-FT Bonaparte /// BAPTISTE FORT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#1a1a1a',
+                        'brand-white': '#fafafa',
+                        'brand-gray': '#f5f5f5',
+                        'brand-gold': '#C9A962',
+                        'brand-gold-light': '#E8D5A3',
+                        'brand-blue': '#4A6FA5',
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'hard': '4px 4px 0px 0px #1a1a1a',
+                        'hard-sm': '2px 2px 0px 0px #1a1a1a',
+                        'gold': '4px 4px 0px 0px #C9A962',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { cursor: default; }
+        a { cursor: pointer; }
+        body { background-color: #fafafa; overflow-x: hidden; }
+        .border-hard { border: 2px solid #1a1a1a; }
+        .marquee-container { overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: marquee 40s linear infinite; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .brut-box {
+            background: white;
+            border: 2px solid #1a1a1a;
+            box-shadow: 4px 4px 0px 0px #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        .brut-box:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px #1a1a1a;
+        }
+        .tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            padding: 4px 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .tag-gold { background: #C9A962; color: #1a1a1a; }
+        .tag-green { background: #43a047; color: white; }
+        ul.check-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.check-list li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #C9A962;
+            font-weight: bold;
+        }
+        .section-header { background: #1a1a1a; color: white; }
+        .gold-accent { color: #C9A962; }
+        .bg-gold-accent { background: #C9A962; }
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+    </style>
+</head>
+
+<body class="text-brand-black selection:bg-brand-gold selection:text-black">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-brand-black flex justify-between items-stretch">
+        <div class="px-6 py-4 bg-brand-black text-white font-display font-bold text-xl tracking-tight flex items-center">
+            BAPTISTE<span class="text-brand-gold">/</span>FORT
+        </div>
+        <div class="hidden md:flex flex-1 items-center overflow-hidden bg-brand-gold border-l-2 border-brand-black border-r-2">
+            <div class="marquee-container w-full font-mono font-medium text-xs text-brand-black">
+                <div class="marquee-content">
+                    &nbsp;&nbsp;&nbsp;AUTOMATISATION LCB-FT * RESEAU BONAPARTE * MYNOTARY + EFFICIALE&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;AUTOMATISATION LCB-FT * RESEAU BONAPARTE * MYNOTARY + EFFICIALE&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="px-6 py-4 font-mono font-medium hover:bg-brand-black hover:text-white transition-colors cursor-pointer text-xs flex items-center tracking-wide">
+            JANVIER 2026
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="pt-28 pb-16 px-4 md:px-8 max-w-6xl mx-auto">
+        <div class="bg-white border-hard p-8 md:p-12 shadow-hard mb-10 relative">
+            <div class="absolute -top-3 -left-3 bg-brand-gold text-brand-black font-mono font-medium px-4 py-2 text-xs tracking-wide">
+                POUR CYNTHIA
+            </div>
+
+            <h1 class="font-display font-black text-4xl md:text-6xl mb-8 leading-tight">
+                Hello Cynthia !<br>
+                <span class="gold-accent">Voila ce que je te propose</span>
+            </h1>
+
+            <div class="space-y-5 text-base font-sans font-normal max-w-3xl text-brand-black/80">
+                <p>Je te fais cette petite presentation pour voir si ca correspond bien a ce que tu veux. On peut ajuster, aucun probleme.</p>
+                <p class="font-medium text-brand-black">L'idee c'est que les verifications LCB-FT se fassent toutes seules, sans que les mandataires aient quoi que ce soit a faire.</p>
+            </div>
+        </div>
+
+        <!-- MONTANT -->
+        <div class="grid md:grid-cols-12 gap-6 items-stretch">
+            <div class="md:col-span-8 bg-brand-black text-white border-hard p-8 md:p-10">
+                <p class="text-brand-gold font-mono text-xs mb-3 tracking-wider">// LE PRIX</p>
+                <h2 class="font-display font-black text-5xl md:text-6xl mb-4">1 350 € <span class="text-2xl text-white/60">TTC</span></h2>
+                <p class="text-white/70 mb-6">Tout compris : mise en place, tests, ajustements</p>
+            </div>
+
+            <div class="md:col-span-4 bg-brand-gold border-hard p-8 flex flex-col justify-center">
+                <p class="mb-2 font-mono text-xs text-brand-black/60 tracking-wide">SI T'ES OK</p>
+                <h3 class="font-bold font-mono text-2xl mb-3 border-b-2 border-brand-black pb-2">Je commence demain</h3>
+                <p class="text-brand-black font-medium text-sm">Et c'est pret mardi / mercredi</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MODULES -->
+    <main class="px-4 md:px-8 max-w-6xl mx-auto pb-24 space-y-10">
+
+        <!-- C'EST QUOI L'IDEE -->
+        <section class="brut-box p-0">
+            <div class="section-header p-4 md:p-6 flex justify-between items-center">
+                <h2 class="font-display font-bold text-xl md:text-2xl">C'est quoi l'idee ?</h2>
+            </div>
+            <div class="p-6 md:p-10 space-y-6">
+                <p class="text-lg">Aujourd'hui, quand un mandataire fait signer un mandat de vente, une offre d'achat ou un mandat de recherche, il doit ensuite aller faire les verifications LCB-FT a la main sur Efficiale, puis remettre le rapport dans MyNotary.</p>
+
+                <div class="bg-brand-gold/20 border-l-4 border-brand-gold p-6">
+                    <p class="text-xl font-bold">L'idee c'est que tout ca se fasse tout seul.</p>
+                    <p class="mt-2 text-brand-black/70">Le mandataire fait signer son document, et hop, le rapport de conformite apparait directement dans le dossier MyNotary. Il n'a rien a faire.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMENT CA MARCHE -->
+        <section class="brut-box p-0">
+            <div class="section-header p-4 md:p-6 flex justify-between items-center">
+                <h2 class="font-display font-bold text-xl md:text-2xl">Comment ca marche ?</h2>
+            </div>
+            <div class="p-6 md:p-10">
+                <div class="space-y-8">
+
+                    <!-- Etape 1 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-gold flex items-center justify-center font-display font-bold text-xl">1</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Un document est signe</h4>
+                            <p class="text-brand-black/70">Le systeme detecte automatiquement que quelqu'un a signe un mandat de vente, une offre d'achat ou un mandat de recherche.</p>
+                        </div>
+                    </div>
+
+                    <!-- Etape 2 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-gold flex items-center justify-center font-display font-bold text-xl">2</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Les verifications se lancent</h4>
+                            <p class="text-brand-black/70 mb-3">Le systeme recupere les infos du client (nom, prenom, date de naissance, etc.) et envoie tout ca a Efficiale pour verifier :</p>
+                            <ul class="check-list text-brand-black/70">
+                                <li>Est-ce que la personne est sur une liste de sanctions ?</li>
+                                <li>Est-ce que c'est une Personne Politiquement Exposee (PPE) ?</li>
+                                <li>Y a-t-il des alertes ?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Etape 3 -->
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-gold flex items-center justify-center font-display font-bold text-xl">3</div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Le rapport arrive dans MyNotary</h4>
+                            <p class="text-brand-black/70">Un joli PDF avec tous les resultats est genere et uploade directement dans le dossier MyNotary du client.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SI C'EST UNE SOCIETE -->
+        <section class="brut-box p-0">
+            <div class="section-header p-4 md:p-6 flex justify-between items-center">
+                <h2 class="font-display font-bold text-xl md:text-2xl">Et si c'est une societe ?</h2>
+                <span class="tag tag-gold">SCI, SARL, ETC.</span>
+            </div>
+            <div class="p-6 md:p-10">
+                <p class="text-lg mb-4">Ca marche aussi ! Le systeme va chercher les beneficiaires effectifs de la societe (via le registre INPI) et verifie chacun d'entre eux.</p>
+                <p class="text-brand-black/70">Par exemple pour une SCI, il va identifier tous les associes et les verifier un par un.</p>
+            </div>
+        </section>
+
+        <!-- AVANT / APRES -->
+        <section class="brut-box p-0">
+            <div class="section-header p-4 md:p-6 flex justify-between items-center">
+                <h2 class="font-display font-bold text-xl md:text-2xl">Ce que ca change pour les mandataires</h2>
+            </div>
+            <div class="p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- AVANT -->
+                    <div class="border-2 border-brand-black/20 p-6">
+                        <h4 class="font-mono text-sm text-brand-black/50 mb-4">AVANT</h4>
+                        <ul class="space-y-2 text-brand-black/70">
+                            <li>1. Aller sur Efficiale</li>
+                            <li>2. Se connecter</li>
+                            <li>3. Chercher le client</li>
+                            <li>4. Telecharger le PDF</li>
+                            <li>5. Aller sur MyNotary</li>
+                            <li>6. Uploader le PDF au bon endroit</li>
+                        </ul>
+                    </div>
+
+                    <!-- APRES -->
+                    <div class="bg-brand-gold/20 border-2 border-brand-gold p-6">
+                        <h4 class="font-mono text-sm text-brand-black/50 mb-4">APRES</h4>
+                        <p class="text-xl font-bold mb-2">Il fait signer le document.</p>
+                        <p class="text-brand-black/70">C'est tout. Le rapport apparait dans le dossier.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OU J'EN SUIS -->
+        <section class="brut-box p-0">
+            <div class="section-header p-4 md:p-6 flex justify-between items-center">
+                <h2 class="font-display font-bold text-xl md:text-2xl">Ou j'en suis techniquement</h2>
+                <span class="tag tag-green">QUASI PRET</span>
+            </div>
+            <div class="p-6 md:p-10">
+                <p class="mb-6 text-brand-black/70">J'ai teste toutes les connexions entre les systemes :</p>
+
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
+                        <span>Detecter les signatures dans MyNotary</span>
+                        <span class="tag tag-green">OK</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
+                        <span>Recuperer les infos du client</span>
+                        <span class="tag tag-green">OK</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
+                        <span>Se connecter a Efficiale</span>
+                        <span class="tag tag-green">OK</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
+                        <span>Verifier une societe + ses beneficiaires</span>
+                        <span class="tag tag-green">OK</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-brand-black/10">
+                        <span>Verifier une personne</span>
+                        <span class="tag tag-gold">PRESQUE</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span>Deposer le PDF dans MyNotary</span>
+                        <span class="tag tag-gold">PRESQUE</span>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-brand-black/70">En gros les briques sont la, il reste a tout assembler proprement et gerer les cas particuliers.</p>
+            </div>
+        </section>
+
+        <!-- CE QUI EST INCLUS -->
+        <section class="brut-box p-0 bg-brand-black text-white">
+            <div class="p-6 md:p-10">
+                <h2 class="font-display font-bold text-2xl md:text-3xl mb-8 border-b border-white/20 pb-4">Ce qui est inclus</h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-mono text-brand-gold text-sm mb-4">MISE EN PLACE</h4>
+                        <p class="text-white/80">L'automatisation complete qui fait le lien entre MyNotary et Efficiale</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-brand-gold text-sm mb-4">TESTS</h4>
+                        <p class="text-white/80">On teste avec des vrais dossiers pour etre sur que tout marche bien</p>
+                    </div>
+                    <div>
+                        <h4 class="font-mono text-brand-gold text-sm mb-4">AJUSTEMENTS</h4>
+                        <p class="text-white/80">Si y'a des trucs a modifier ou des cas particuliers, on ajuste</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black text-white py-16 px-4 md:px-8 border-t-4 border-brand-gold">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="mb-10 font-sans text-lg leading-relaxed">
+                <p class="mb-6 text-white/70">Des questions ? Dis-moi si c'est clair ou si tu veux que je t'explique un truc autrement !</p>
+            </div>
+
+            <a href="https://wa.me/33626105640?text=Hello%20Baptiste%20!%20C'est%20bon%20pour%20moi%20pour%20l'automatisation%20LCB-FT%20Bonaparte%20!" target="_blank"
+                class="inline-block font-display font-bold text-2xl md:text-3xl bg-brand-gold text-brand-black px-10 py-5 border-2 border-brand-gold hover:bg-transparent hover:text-brand-gold transition-all">
+                C'EST BON POUR MOI !
+            </a>
+
+            <p class="mt-8 text-white/50 text-sm">Ou ecris-moi si tu veux qu'on ajuste quelque chose</p>
+        </div>
+    </footer>
+
+    <script>
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), direction: 'vertical', smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.brut-box').forEach((box, i) => {
+            gsap.from(box, { scrollTrigger: { trigger: box, start: 'top 85%', toggleActions: 'play none none reverse' }, y: 40, opacity: 0, duration: 0.8, ease: 'power2.out' });
+        });
+    </script>
+
+</body>
+</html>
